@@ -1,0 +1,440 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: Codigo.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Codigo.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Codigo"
+Output Format                      : NGC
+Target Device                      : xc3s400-4-ft256
+
+---- Source Options
+Top Module Name                    : Codigo
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "F:/ALU/Codigo.vhd" in Library work.
+Entity <codigo> compiled.
+Entity <codigo> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Codigo> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Codigo> in library <work> (Architecture <behavioral>).
+Entity <Codigo> analyzed. Unit <Codigo> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Codigo>.
+    Related source file is "F:/ALU/Codigo.vhd".
+    Using one-hot encoding for signal <auxauxOP>.
+    Found 8-bit register for signal <a_out>.
+    Found 8-bit register for signal <b_out>.
+    Found 9-bit register for signal <RESULTADO>.
+    Found 1-bit register for signal <CERO>.
+    Found 1-bit register for signal <SIGNO>.
+    Found 8-bit register for signal <LEDS>.
+    Found 9-bit register for signal <A_aux>.
+    Found 9-bit adder for signal <auxauxRESULTADO>.
+    Found 5-bit register for signal <auxOP>.
+    Found 9-bit adder for signal <auxRESULTADO_0$add0000> created at line 110.
+    Found 9-bit adder for signal <auxRESULTADO_0$add0001> created at line 112.
+    Found 9-bit comparator equal for signal <auxRESULTADO_0$cmp_eq0023> created at line 182.
+    Found 9-bit comparator greater for signal <auxRESULTADO_0$cmp_gt0000> created at line 144.
+    Found 9-bit comparator less for signal <auxRESULTADO_0$cmp_lt0000> created at line 138.
+    Found 9-bit subtractor for signal <auxRESULTADO_0$sub0000> created at line 108.
+    Found 9-bit subtractor for signal <auxRESULTADO_0$sub0001> created at line 109.
+    Found 9-bit subtractor for signal <auxRESULTADO_0$sub0002> created at line 111.
+    Found 1-bit xor2 for signal <auxRESULTADO_0$xor0000> created at line 153.
+    Found 1-bit xor8 for signal <auxRESULTADO_0$xor0001> created at line 167.
+    Found 1-bit xor2 for signal <auxRESULTADO_1$xor0000> created at line 153.
+    Found 1-bit xor2 for signal <auxRESULTADO_2$xor0000> created at line 153.
+    Found 1-bit xor2 for signal <auxRESULTADO_3$xor0000> created at line 153.
+    Found 1-bit xor2 for signal <auxRESULTADO_4$xor0000> created at line 153.
+    Found 1-bit xor2 for signal <auxRESULTADO_5$xor0000> created at line 153.
+    Found 1-bit xor2 for signal <auxRESULTADO_6$xor0000> created at line 153.
+    Found 1-bit xor2 for signal <auxRESULTADO_7$xor0000> created at line 153.
+    Found 1-bit xor2 for signal <auxRESULTADO_8$xor0000> created at line 153.
+    Found 9-bit register for signal <B_aux>.
+    Found 5-bit comparator less for signal <TipoOP$cmp_lt0000> created at line 199.
+    Found 5-bit comparator less for signal <TipoOP$cmp_lt0001> created at line 201.
+    Found 5-bit comparator less for signal <TipoOP$cmp_lt0002> created at line 204.
+    Summary:
+	inferred  58 D-type flip-flop(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred   6 Comparator(s).
+	inferred   1 Xor(s).
+Unit <Codigo> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 6
+ 9-bit adder                                           : 3
+ 9-bit subtractor                                      : 3
+# Registers                                            : 9
+ 1-bit register                                        : 2
+ 5-bit register                                        : 1
+ 8-bit register                                        : 3
+ 9-bit register                                        : 3
+# Comparators                                          : 6
+ 5-bit comparator less                                 : 3
+ 9-bit comparator equal                                : 1
+ 9-bit comparator greater                              : 1
+ 9-bit comparator less                                 : 1
+# Xors                                                 : 10
+ 1-bit xor2                                            : 9
+ 1-bit xor8                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 6
+ 9-bit adder                                           : 3
+ 9-bit subtractor                                      : 3
+# Registers                                            : 58
+ Flip-Flops                                            : 58
+# Comparators                                          : 6
+ 5-bit comparator less                                 : 3
+ 9-bit comparator equal                                : 1
+ 9-bit comparator greater                              : 1
+ 9-bit comparator less                                 : 1
+# Xors                                                 : 10
+ 1-bit xor2                                            : 9
+ 1-bit xor8                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <B_aux_7> in Unit <Codigo> is equivalent to the following FF/Latch, which will be removed : <B_aux_8> 
+INFO:Xst:2261 - The FF/Latch <A_aux_7> in Unit <Codigo> is equivalent to the following FF/Latch, which will be removed : <A_aux_8> 
+INFO:Xst:2261 - The FF/Latch <RESULTADO_8> in Unit <Codigo> is equivalent to the following FF/Latch, which will be removed : <SIGNO> 
+
+Optimizing unit <Codigo> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Codigo, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 55
+ Flip-Flops                                            : 55
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Codigo.ngr
+Top Level Output File Name         : Codigo
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 60
+
+Cell Usage :
+# BELS                             : 347
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 65
+#      LUT2_D                      : 4
+#      LUT2_L                      : 2
+#      LUT3                        : 22
+#      LUT3_D                      : 2
+#      LUT3_L                      : 7
+#      LUT4                        : 106
+#      LUT4_D                      : 26
+#      LUT4_L                      : 34
+#      MUXCY                       : 42
+#      MUXF5                       : 7
+#      VCC                         : 1
+#      XORCY                       : 27
+# FlipFlops/Latches                : 55
+#      FDC                         : 39
+#      FDE                         : 16
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 59
+#      IBUF                        : 22
+#      OBUF                        : 37
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400ft256-4 
+
+ Number of Slices:                      142  out of   3584     3%  
+ Number of Slice Flip Flops:             39  out of   7168     0%  
+ Number of 4 input LUTs:                269  out of   7168     3%  
+ Number of IOs:                          60
+ Number of bonded IOBs:                  60  out of    173    34%  
+    IOB Flip Flops:                      16
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 55    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+a_reset                            | IBUF                   | 39    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 13.918ns (Maximum Frequency: 71.849MHz)
+   Minimum input arrival time before clock: 5.110ns
+   Maximum output required time after clock: 10.274ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 13.918ns (frequency: 71.849MHz)
+  Total number of paths / destination ports: 8692 / 18
+-------------------------------------------------------------------------
+Delay:               13.918ns (Levels of Logic = 12)
+  Source:            A_aux_0 (FF)
+  Destination:       CERO (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: A_aux_0 to CERO
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             24   0.720   1.992  A_aux_0 (A_aux_0)
+     LUT2:I1->O            1   0.551   0.000  Msub_auxRESULTADO_0_sub0001_lut<0> (Msub_auxRESULTADO_0_sub0001_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  Msub_auxRESULTADO_0_sub0001_cy<0> (Msub_auxRESULTADO_0_sub0001_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_auxRESULTADO_0_sub0001_cy<1> (Msub_auxRESULTADO_0_sub0001_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_auxRESULTADO_0_sub0001_cy<2> (Msub_auxRESULTADO_0_sub0001_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_auxRESULTADO_0_sub0001_cy<3> (Msub_auxRESULTADO_0_sub0001_cy<3>)
+     XORCY:CI->O           1   0.904   1.140  Msub_auxRESULTADO_0_sub0001_xor<4> (auxRESULTADO_0_sub0001<4>)
+     LUT4:I0->O            1   0.551   0.827  auxRESULTADO_4_mux000040 (auxRESULTADO_4_mux000040)
+     LUT4:I3->O            1   0.551   0.827  auxRESULTADO_4_mux000050_SW0_SW0 (N69)
+     LUT4:I3->O            1   0.551   0.827  auxRESULTADO_4_mux0000131 (auxRESULTADO_4_mux0000131)
+     LUT4:I3->O            3   0.551   1.102  auxRESULTADO_4_mux0000182 (auxRESULTADO<4>)
+     LUT4:I1->O            1   0.551   0.827  CERO_mux000115 (CERO_mux000115)
+     LUT4:I3->O            1   0.551   0.000  CERO_mux000123 (CERO_mux0001)
+     FDC:D                     0.203          CERO
+    ----------------------------------------
+    Total                     13.918ns (6.376ns logic, 7.542ns route)
+                                       (45.8% logic, 54.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 53 / 53
+-------------------------------------------------------------------------
+Offset:              5.110ns (Levels of Logic = 2)
+  Source:            a_reset (PAD)
+  Destination:       a_out_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: a_reset to a_out_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            40   0.821   1.899  a_reset_IBUF (a_reset_IBUF)
+     INV:I->O             16   0.551   1.237  a_reset_inv1_INV_0 (a_reset_inv)
+     FDE:CE                    0.602          a_out_0
+    ----------------------------------------
+    Total                      5.110ns (1.974ns logic, 3.136ns route)
+                                       (38.6% logic, 61.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 47 / 37
+-------------------------------------------------------------------------
+Offset:              10.274ns (Levels of Logic = 3)
+  Source:            auxOP_2 (FF)
+  Destination:       TipoOP<0> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: auxOP_2 to TipoOP<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             33   0.720   2.198  auxOP_2 (auxOP_2)
+     LUT3:I0->O            1   0.551   0.000  TipoOP<0>2 (TipoOP<0>2)
+     MUXF5:I0->O           1   0.360   0.801  TipoOP<0>_f5 (TipoOP_0_OBUF)
+     OBUF:I->O                 5.644          TipoOP_0_OBUF (TipoOP<0>)
+    ----------------------------------------
+    Total                     10.274ns (7.275ns logic, 2.999ns route)
+                                       (70.8% logic, 29.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 12.00 secs
+ 
+--> 
+
+Total memory usage is 302068 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+
